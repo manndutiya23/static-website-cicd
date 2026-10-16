@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A beginner-friendly DevOps project demonstrating a containerized static website CI/CD pipeline."
+    />
+    <title>LaunchPad | Static Website CI/CD</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Primary navigation">
+        <a class="brand" href="#home" aria-label="LaunchPad home">
+          <span class="brand-mark" aria-hidden="true">L</span>
+          <span>LaunchPad</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+          <span class="sr-only">Toggle navigation</span>
+          <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links" id="site-menu">
+          <a href="#features">Features</a>
+          <a href="#workflow">Workflow</a>
+          <a class="nav-button" href="#get-started">Get started</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero container">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span> Built to ship with confidence</p>
+          <h1>Turn every commit into a <span>live experience.</span></h1>
+          <p class="hero-text">
+            A small, practical DevOps playground for learning how HTML, Docker, Nginx, and
+            GitHub Actions work together.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#get-started">Explore the project <span aria-hidden="true">-&gt;</span></a>
+            <a class="button button-secondary" href="#workflow">See the workflow</a>
+          </div>
+          <div class="hero-proof" aria-label="Project highlights">
+            <div><strong>100%</strong><span>Static files</span></div>
+            <div><strong>Fast</strong><span>Nginx delivery</span></div>
+            <div><strong>Ready</strong><span>For CI/CD</span></div>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Illustration of an automated deployment pipeline">
+          <div class="glow"></div>
+          <div class="terminal-card">
+            <div class="terminal-top"><span></span><span></span><span></span><small>deploy.sh</small></div>
+            <div class="terminal-body">
+              <p><span class="prompt">$</span> git push origin main</p>
+              <p class="muted">Running GitHub Actions...</p>
+              <p><span class="check">[ok]</span> Build image</p>
+              <p><span class="check">[ok]</span> Start container</p>
+              <p><span class="check">[ok]</span> Test /health</p>
+              <p><span class="prompt">$</span> <span class="cursor"></span></p>
+            </div>
+          </div>
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="floating-badge badge-docker"><span aria-hidden="true">◆</span> Docker</div>
+          <div class="floating-badge badge-actions"><span aria-hidden="true">✓</span> Actions</div>
+        </div>
+      </section>
+
+      <section class="features section container" id="features">
+        <div class="section-heading">
+          <p class="eyebrow">The toolkit</p>
+          <h2>Simple tools. <span>Real habits.</span></h2>
+          <p>Everything you need to understand the path from a local file to a tested container.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="icon icon-code" aria-hidden="true">&lt;/&gt;</div>
+            <h3>Plain and clear</h3>
+            <p>Semantic HTML, responsive CSS, and a tiny JavaScript enhancement keep the foundation easy to learn.</p>
+            <a href="#get-started">View the source <span aria-hidden="true">-&gt;</span></a>
+          </article>
+          <article class="feature-card featured-card">
+            <div class="icon icon-container" aria-hidden="true">▣</div>
+            <h3>Container-ready</h3>
+            <p>Nginx on Alpine serves the site in a small, predictable production-style container.</p>
+            <a href="#workflow">See the Docker flow <span aria-hidden="true">-&gt;</span></a>
+          </article>
+          <article class="feature-card">
+            <div class="icon icon-check" aria-hidden="true">✓</div>
+            <h3>Always verified</h3>
+            <p>Every push can build the image, start a container, and check both the page and health endpoint.</p>
+            <a href="#workflow">Inspect the checks <span aria-hidden="true">-&gt;</span></a>
+          </article>
+        </div>
+      </section>
+
+      <section class="workflow-section section" id="workflow">
+        <div class="container workflow-content">
+          <div class="section-heading">
+            <p class="eyebrow">The journey</p>
+            <h2>From code to <span>confidence.</span></h2>
+            <p>Four approachable steps make the continuous integration loop visible.</p>
+          </div>
+          <ol class="steps">
+            <li><span>01</span><div><h3>Write</h3><p>Update the website files locally.</p></div></li>
+            <li><span>02</span><div><h3>Build</h3><p>Package the site into an Nginx image.</p></div></li>
+            <li><span>03</span><div><h3>Test</h3><p>Check the page and <code>/health</code> response.</p></div></li>
+            <li><span>04</span><div><h3>Share</h3><p>Push a reliable change to GitHub.</p></div></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="cta container" id="get-started">
+        <div>
+          <p class="eyebrow">Ready when you are</p>
+          <h2>Make your next commit <span>count.</span></h2>
+          <p>Clone the project, make a small change, and watch the pipeline do its work.</p>
+        </div>
+        <a class="button button-primary" href="https://github.com/" target="_blank" rel="noreferrer">Open GitHub <span aria-hidden="true">-&gt;</span></a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-content">
+        <a class="brand" href="#home"><span class="brand-mark" aria-hidden="true">L</span><span>LaunchPad</span></a>
+        <p>Built for learning. Ready for shipping.</p>
+        <p class="copyright">&copy; <span id="current-year"></span> LaunchPad</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
